@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Resultados</title>
+	<link rel="shorcut icon" type="image/x-icon" href="../images/home1.ico">
+    <style type="text/css">
+body
+{
+	background-color: #FFFFF5;
+	display: inline-block;
+}
+div.level1Div
+{
+	border: thin solid #ADADC9;
+	padding: 8pt;
+	margin-top: 8pt;
+}
+h1
+{
+	background-color: #000048;
+	color: #FFFFFF;
+	padding: 4pt;
+	margin: 0pt;
+}
+div.level2Div
+{
+	border: thin solid #ADADC9;
+	padding: 8pt;
+	margin-top: 8pt;
+}
+h2
+{
+	background-color: #EA5E00;
+	color: #FFFFFF;
+	padding: 4pt;
+	margin: 0pt;
+}
+h3.error
+{
+  color: red
+}
+h3.good
+{
+  color: green
+}
+table
+{
+	margin-top: 8pt;
+	border-collapse: collapse;
+}
+td
+{
+	margin: 0px;
+	border: thin solid #000000;
+	padding: 4pt;
+}
+th
+{
+	margin: 0px;
+	border: thin solid #000000;
+	font-weight: bold;
+	text-align: left;
+	padding: 4pt;
+	background-color: #DDDDDD;
+}
+ul
+{
+	list-style-type: none;
+	padding: 6pt;
+	margin: 0pt;
+}
+h3
+{
+	padding: 4pt;
+	margin: 0pt;
+}
+.grammarSymbol
+{
+	font-family: "Courier New" , Courier, monospace;
+	color: #000066;
+	font-weight: bold;
+}
+.grammarSymbolSpecial, .grammarEpsilon
+{
+	font-family: "Courier New" , Courier, monospace;
+	font-weight: bold;
+	font-style: italic;
+	color: #000066;
+}
+.grammarDot
+{
+	font-family: "Courier New" , Courier, monospace;
+	color: #000000;
+}
+.grammarArrow
+{
+	font-family: "Times New Roman" , Times, serif;
+	color: #000000;
+	font-weight: bold;
+	font-size: larger;
+}
+.grammarOr, .grammarComma
+{
+	font-family: "Times New Roman" , Times, serif;
+	color: #000000;
+	font-weight: bold;
+	font-size: larger;
+}
+.headerFooterDiv
+{
+	background-color: #C8C8C8;
+	padding: 2pt;
+}
+h4
+{
+	padding: 4pt;
+	margin: 0pt;
+}
+td.separatorTableCell
+{
+	padding: 1px;
+	margin: 1px;
+	border: thin solid #000000;
+}
+th.separatorTableCell
+{
+	padding: 1px;
+	margin: 1px;
+	border: thin solid #000000;
+}
+</style>
+  </head>
+  <body>
+    <div class="headerFooterDiv">
+      <h4>Analizador de Gramáticas | Liset Silva | <a href="mailto:l.silva@estudiantes.matcom.uh.cu" title="Enviar correo a Liset">l.silva@estudiantes.matcom.uh.cu</a> | Ariel Plasencia | <a href="mailto:a.plasencia@estudiantes.matcom.uh.cu" title="Enviar correo a Ariel">a.plasencia@estudiantes.matcom.uh.cu</a></h4>
+    </div>
+    <hr />
+    <div class="level1Div">
+      <h1>Gramática</h1>
+      <div>
+        %s
+      </div>
+      <div class="level2Div">
+        <h2>Gramática sin recursividad izquierda, prefijos comunes y producciones innecesarias</h2>
+        <div>
+          %s
+        </div>
+      </div>
+    </div>
+    <div class="level1Div">
+      <h1>Conjuntos FIRST y FOLLOW</h1>
+      <div class="level2Div">
+        <h2>FIRST</h2>
+        <div>
+          %s
+        </div>
+      </div>
+      <div class="level2Div">
+        <h2>FOLLOW</h2>
+        <div>
+          %s
+        </div>
+      </div>
+    </div>
+    <div class="level1Div">
+      <h1>Análisis del parser LL(1)</h1>
+      <div class="level2Div">
+        <h2>Tabla LL(1)</h2>
+        <div class="containerDiv">
+          %s
+        </div>
+      </div>
+      <div class="level2Div">
+        <h2>Resultado</h2>
+        %s
+      </div>
+    </div>
+    <div class="level1Div">
+      <h1>Gramática aumentada</h1>
+      <div>
+        %s
+      </div>
+    </div>
+    <div class="level1Div">
+      <h1>Análisis del parser SLR(1)</h1>
+      <div class="level2Div">
+        <h2>Colección de items LR(0)</h2>
+        <div class="containerDiv">
+          <div class="horizontal">
+            %s
+          </div>
+        </div>
+      </div>
+      <div class="level2Div">
+        <h2>Autómata LR(0)</h2>
+        <div class="containerDiv">
+          %s
+        </div>
+      </div>
+      <div class="level2Div">
+        <h2>Tablas ACTION-GOTO</h2>
+        <div class="containerDiv">
+          <div class="horizontal">
+            %s
+            %s
+          </div>
+        </div>
+      </div>
+      <div class="level2Div">
+        <h2>Resultado</h2>
+        %s
+      </div>
+    </div>
+    <div class="level1Div">
+      <h1>Análisis del parser LR(1)</h1>
+      <div class="level2Div">
+        <h2>Colección de items LR(1)</h2>
+        <div class="containerDiv">
+          <div class="horizontal">
+            %s
+          </div>
+        </div>
+      </div>
+      <div class="level2Div">
+        <h2>Autómata LR(1)</h2>
+        <div class="containerDiv">
+          %s
+        </div>
+      </div>
+      <div class="level2Div">
+        <h2>Tabla ACTION-GOTO</h2>
+        <div class="containerDiv">
+          <div class="horizontal">
+            %s
+            %s
+          </div>
+        </div>
+      </div>
+      <div class="level2Div">
+        <h2>Resultado</h2>
+        %s
+      </div>
+    </div>
+    <div class="level1Div">
+      <h1>Análisis del parser LALR</h1>
+      <div class="level2Div">
+        <h2>Colección de items LALR</h2>
+        <div class="containerDiv">
+          %s
+        </div>
+      </div>
+      <div class="level2Div">
+        <h2>Autómata LALR</h2>
+        <div class="containerDiv">
+          %s
+        </div>
+      </div>
+      <div class="level2Div">
+        <h2>Tabla ACTION-GOTO</h2>
+        <div class="containerDiv">
+          <div class="horizontal">
+            %s
+            %s
+          </div>
+        </div>
+      </div>
+      <div class="level2Div">
+        <h2>Resultado</h2>
+        %s
+      </div>
+    </div>
+    <div class="level1Div">
+      <h1>Derivaciones de las cadenas</h1>
+      <div class="containerDiv">
+        <div class="horizontal">
+          %s
+        </div>
+      </div>
+    </div>
+    <div class="level1Div">
+      <h1>Análisis de regularidad</h1>
+      <div class="level2Div">
+        <h2>Resultado</h2>
+        %s
+      </div>
+      <div class="level2Div">
+        <h2>Autómata regular</h2>
+        <div class="containerDiv">
+          %s
+        </div>
+      </div>
+      <div class="level2Div">
+        <h2>Expresión regular</h2>
+          %s
+      </div>
+    </div>
+    <hr />
+    <div class="headerFooterDiv">
+      <h4>Analizador de Gramáticas | Liset Silva | <a href="mailto:l.silva@estudiantes.matcom.uh.cu" title="Enviar correo a Liset">l.silva@estudiantes.matcom.uh.cu</a> | Ariel Plasencia | <a href="mailto:a.plasencia@estudiantes.matcom.uh.cu" title="Enviar correo a Ariel">a.plasencia@estudiantes.matcom.uh.cu</a></h4>
+    </div>
+  </body>
+</html>
