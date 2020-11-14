@@ -1,3 +1,0 @@
-S -> A B
-A -> a A | epsilon
-B -> b B | epsilon

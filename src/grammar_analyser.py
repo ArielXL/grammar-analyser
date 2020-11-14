@@ -58,7 +58,7 @@ class MainWindow(QMainWindow):
         dlg.show()
 
     def LoadGrammar(self):
-        path, _ = QFileDialog.getOpenFileName(self, "Cargar Gramática", "", "Documentos de texto (*.txt)")
+        path, _ = QFileDialog.getOpenFileName(self, "Cargar Gramática", "../examples", "Documentos de texto (*.txt)")
 
         if not path:
             return
@@ -75,22 +75,13 @@ class MainWindow(QMainWindow):
             self.ClearResults()
 
     def SaveGrammar(self):
-        if self.path is None:
-            return self.SaveGrammarAs()
-
-        text = self.ui.textEditGrammar.toPlainText()
-        try:
-            with open(self.path, 'w') as f:
-                f.write(text)
-        except Exception as e:
-            self.DialogCritical(str(e))
-
-    def SaveGrammarAs(self):
-        path, _ = QFileDialog.getSaveFileName(self, "Guardar Gramática", "", "Documentos de texto (*.txt)")
+        path, _ = QFileDialog.getSaveFileName(self, "Guardar Gramática", "../examples", "Documentos de texto (*.txt)")
         text = self.ui.textEditGrammar.toPlainText()
 
         if not path:
             return
+        elif not path.endswith('.txt'):
+            path += '.txt'
 
         try:
             with open(path, 'w') as f:
@@ -129,20 +120,18 @@ class MainWindow(QMainWindow):
             grammar_html = HtmlFormatter.GrammarToHtml(grammar)
 
         except BadTextFormatException:
-            print('La gamática no está escrita en el formato correcto. Lea la ayuda de Analizador de Gramáticas.')
-            # NotificationWindow.error('Error', 
-            #                         '''<html><head/><body><span style=" font-style:italic; color:teal;">
-            #                         <p>La gamática no está escrita en el formato correcto.</p>
-            #                         <p>Lea la ayuda de Analizador de Gramáticas.</p><p></p>
-            #                         </span></body></html>''', callback=lambda: self.how_to_use())
+            NotificationWindow.error('Error', 
+                                    '''<html><head/><body><span style=" font-style:italic; color:teal;">
+                                    <p>La gamática no está escrita en el formato correcto.</p>
+                                    <p>Lea la ayuda de Analizador de Gramáticas.</p><p></p>
+                                    </span></body></html>''', callback=lambda: self.Help())
 
         else:
-            print('La gramática está siendo analizada. Espere unos segundos.')
-            # NotificationWindow.info('Analizando', 
-            #                         '''<html><head/><body><span style="color:gray;">
-            #                         <p>La gramática está siendo analizada.</p>
-            #                         <p>Espere unos instantes.</p><p></p>
-            #                         </span></body></html>''')
+            NotificationWindow.info('Analizando', 
+                                    '''<html><head/><body><span style="color:gray;">
+                                    <p>La gramática está siendo analizada.</p>
+                                    <p>Espere unos instantes.</p><p></p>
+                                    </span></body></html>''')
 
             # parsear las cadenas a procesar
             words = [UtilsParsers.Tokenizer(grammar, word) for word in words]
@@ -256,12 +245,11 @@ class MainWindow(QMainWindow):
                                             goto_lalr_html, is_lalr_html, derivations_html,
                                             is_regular_html, regular_automaton_html, regular_expresion_html))
 
-            print('Listo. El análisis de la gramática ha termiando. Todos los resultados están listos.')
-            # NotificationWindow.success('Listo', 
-            #                         '''<html><head/><body><span style="color:green;">
-            #                         <p>El análisis de la gramática ha termiando.</p>
-            #                         <p>Todos los resultados están listos.</p><p></p>
-            #                         </span></body></html>''')
+            NotificationWindow.success('Listo', 
+                                    '''<html><head/><body><span style="color:green;">
+                                    <p>El análisis de la gramática ha termiando.</p>
+                                    <p>Todos los resultados están listos.</p><p></p>
+                                    </span></body></html>''')
 
     def Help(self):
         dialog = QDialog()
