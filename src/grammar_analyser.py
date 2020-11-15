@@ -30,10 +30,10 @@ class MainWindow(QMainWindow):
         self.ui.actionNewGrammar.triggered.connect(self.NewGrammar)
         self.ui.actionLoadGrammar.triggered.connect(self.LoadGrammar)
         self.ui.actionSaveGrammar.triggered.connect(self.SaveGrammar)
-        self.ui.actionAnalyse_2.triggered.connect(self.ShowWordsDialog)
-        self.ui.actionQuickAnalyse_2.triggered.connect(self.QuickAnalyseGrammar)
+        self.ui.actionAnalyse1.triggered.connect(self.ShowWordsDialog)
+        self.ui.actionQuickAnalyse1.triggered.connect(self.QuickAnalyseGrammar)
         self.ui.actionExit.triggered.connect(self.Exit)
-        self.ui.actionHelp_2.triggered.connect(self.Help)
+        self.ui.actionHelp1.triggered.connect(self.Help)
         self.ui.actionAboutAuthors.triggered.connect(self.AboutAuthors)
         self.ui.actionAboutGrammarAnalyser.triggered.connect(self.AboutGrammarAnalyser)
         
@@ -112,20 +112,17 @@ class MainWindow(QMainWindow):
         return self.AnalyseGrammar()
     
     def AnalyseGrammar(self, words=[]):
-
         text = self.ui.textEditGrammar.toPlainText()
 
         try:
             grammar = UtilsGrammar.GetGrammar(text)
             grammar_html = HtmlFormatter.GrammarToHtml(grammar)
-
         except BadTextFormatException:
             NotificationWindow.error('Error', 
                                     '''<html><head/><body><span style=" font-style:italic; color:teal;">
                                     <p>La gamática no está escrita en el formato correcto.</p>
                                     <p>Lea la ayuda de Analizador de Gramáticas.</p><p></p>
                                     </span></body></html>''', callback=lambda: self.Help())
-
         else:
             NotificationWindow.info('Analizando', 
                                     '''<html><head/><body><span style="color:gray;">
@@ -230,7 +227,6 @@ class MainWindow(QMainWindow):
 
             # hallando la gramatica aumentada
             augmented_grammar_html = HtmlFormatter.GrammarToHtml(parser_slr1.augmentedG)
-
 
             self.ui.tabWidget.setTabEnabled(1, True)
             self.ui.tabWidget.setCurrentIndex(1)

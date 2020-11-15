@@ -93,7 +93,6 @@
     <property name="title">
      <string>Archivo</string>
     </property>
-    <addaction name="separator"/>
     <addaction name="actionNewGrammar"/>
     <addaction name="separator"/>
     <addaction name="actionLoadGrammar"/>
@@ -113,14 +112,14 @@
     <property name="title">
      <string>Análisis</string>
     </property>
-    <addaction name="actionAnalyse_2"/>
-    <addaction name="actionQuickAnalyse_2"/>
+    <addaction name="actionAnalyse1"/>
+    <addaction name="actionQuickAnalyse1"/>
    </widget>
    <widget class="QMenu" name="menuAyuda">
     <property name="title">
      <string>Ayuda</string>
     </property>
-    <addaction name="actionHelp_2"/>
+    <addaction name="actionHelp1"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuAnalisis"/>
@@ -138,7 +137,7 @@
   <action name="actionNewGrammar">
    <property name="icon">
     <iconset>
-     <normaloff>../../images/selection-input.png</normaloff>../../images/selection-input.png</iconset>
+     <normaloff>images/selection-input.png</normaloff>images/selection-input.png</iconset>
    </property>
    <property name="text">
     <string>Nueva gramática</string>
@@ -153,7 +152,7 @@
   <action name="actionSaveGrammar">
    <property name="icon">
     <iconset>
-     <normaloff>../../images/disk.png</normaloff>../../images/disk.png</iconset>
+     <normaloff>images/disk.png</normaloff>images/disk.png</iconset>
    </property>
    <property name="text">
     <string>Guardar gramática</string>
@@ -168,7 +167,7 @@
   <action name="actionLoadGrammar">
    <property name="icon">
     <iconset>
-     <normaloff>../../images/blue-folder-horizontal-open.png</normaloff>../../images/blue-folder-horizontal-open.png</iconset>
+     <normaloff>images/blue-folder-horizontal-open.png</normaloff>images/blue-folder-horizontal-open.png</iconset>
    </property>
    <property name="text">
     <string>Cargar gramática</string>
@@ -183,7 +182,7 @@
   <action name="actionExit">
    <property name="icon">
     <iconset>
-     <normaloff>../../images/cross-circle.png</normaloff>../../images/cross-circle.png</iconset>
+     <normaloff>images/cross-circle.png</normaloff>images/cross-circle.png</iconset>
    </property>
    <property name="text">
     <string>Salir</string>
@@ -207,10 +206,10 @@
     <string>F1</string>
    </property>
   </action>
-  <action name="actionHelp_2">
+  <action name="actionHelp1">
    <property name="icon">
     <iconset>
-     <normaloff>../../images/question.png</normaloff>../../images/question.png</iconset>
+     <normaloff>images/question.png</normaloff>images/question.png</iconset>
    </property>
    <property name="text">
     <string>Ayuda</string>
@@ -222,7 +221,7 @@
   <action name="actionAboutGrammarAnalyser">
    <property name="icon">
     <iconset>
-     <normaloff>../../images/lifebuoy.png</normaloff>../../images/lifebuoy.png</iconset>
+     <normaloff>images/lifebuoy.png</normaloff>images/lifebuoy.png</iconset>
    </property>
    <property name="text">
     <string>Acerca de Analizador de Gramáticas</string>
@@ -281,10 +280,10 @@
     <string>F9</string>
    </property>
   </action>
-  <action name="actionAnalyse_2">
+  <action name="actionAnalyse1">
    <property name="icon">
     <iconset>
-     <normaloff>../../images/control.png</normaloff>../../images/control.png</iconset>
+     <normaloff>images/control.png</normaloff>images/control.png</iconset>
    </property>
    <property name="text">
     <string>Análisis de la gramática</string>
@@ -293,10 +292,10 @@
     <string>F5</string>
    </property>
   </action>
-  <action name="actionQuickAnalyse_2">
+  <action name="actionQuickAnalyse1">
    <property name="icon">
     <iconset>
-     <normaloff>../../images/controlx2.png</normaloff>../../images/controlx2.png</iconset>
+     <normaloff>images/controlx2.png</normaloff>images/controlx2.png</iconset>
    </property>
    <property name="text">
     <string>Análisis rápido de la gramática</string>
@@ -308,10 +307,22 @@
   <action name="actionAboutAuthors">
    <property name="icon">
     <iconset>
-     <normaloff>../../images/lifebuoy.png</normaloff>../../images/lifebuoy.png</iconset>
+     <normaloff>images/lifebuoy.png</normaloff>images/lifebuoy.png</iconset>
    </property>
    <property name="text">
     <string>Acerca de los Autores</string>
+   </property>
+  </action>
+  <action name="actionSaveResults">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/disk--pencil.png</normaloff>images/disk--pencil.png</iconset>
+   </property>
+   <property name="text">
+    <string>Guardar resultados</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
    </property>
   </action>
  </widget>
